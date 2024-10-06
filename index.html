@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List App Zidan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-blue-500 flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-6 space-y-4">
+      <!-- Profile Section -->
+      <div class="flex items-center justify-between">
+        <div>
+          <h2
+            id="profile-name"
+            class="text-lg font-semibold text-gray-800"
+          ></h2>
+          <p id="profile-role" class="text-sm text-gray-500"></p>
+        </div>
+        <div id="current-time" class="text-right">
+          <p class="text-gray-600 font-medium"></p>
+          <p class="text-gray-400 text-sm"></p>
+        </div>
+      </div>
+
+      <!-- Input Section -->
+      <div class="space-y-2">
+        <textarea
+          id="todo-input"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Add a new task"
+        ></textarea>
+        <div class="flex items-center space-x-2">
+          <select
+            id="priority-select"
+            class="flex-grow p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <button
+            id="add-task-btn"
+            class="px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            Add Task
+          </button>
+        </div>
+      </div>
+
+      <!-- To-Do List -->
+      <div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">To-Do List</h3>
+        <ul id="todo-list" class="space-y-2">
+          <!-- Tasks will be dynamically added here -->
+        </ul>
+      </div>
+
+      <!-- Done List -->
+      <div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Done</h3>
+        <ul id="done-list" class="space-y-2 text-gray-500">
+          <!-- Completed tasks will be moved here -->
+        </ul>
+      </div>
+
+      <!-- Delete Button -->
+      <button
+        id="delete-all-btn"
+        class="w-full py-2 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+      >
+        Delete All Tasks
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
